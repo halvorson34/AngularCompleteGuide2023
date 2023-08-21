@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { timestamp } from 'rxjs';
 
 @Component({
   selector: 'app-assignment-three',
@@ -8,7 +7,6 @@ import { timestamp } from 'rxjs';
 })
 export class AssignmentThreeComponent {
   displayParagraph = false;
-  clickCounter = 0;
   buttonClicks = [];
 
   toggleParagraphDisplay() {
@@ -17,8 +15,8 @@ export class AssignmentThreeComponent {
     } else {
       this.displayParagraph = false;
     }
-    this.clickCounter++;
 
-    this.buttonClicks.push(this.buttonClicks.length + 1);
+    //this.buttonClicks.push(this.buttonClicks.length + 1);
+    this.buttonClicks.push(new Date());
   }
 }
